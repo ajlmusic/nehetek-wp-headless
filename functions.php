@@ -33,13 +33,13 @@ function msbsbc_pdf_link_att($atts)
 {
     $default = array(
         'link' => '#',
-        'title' => 'file'
+        'title' => 'FILE'
     );
     $a = shortcode_atts($default, $atts);
 
     return '
     <div class="flex flex-col align-center justify-center gap-3">
-        <a href="' . $a['link'] . '" class=" text-center bg-transparent hover:bg-msbsbc-gold text-msbsbc-gold font-semibold hover:text-white py-2 px-4 border border-msbsbc-gold hover:border-transparent rounded">Download ' . $a['title'] . ' </a>
+        <a href="' . $a['link'] . '" class=" text-center bg-transparent hover:bg-msbsbc-gold text-msbsbc-gold font-semibold hover:text-white py-2 px-4 border border-msbsbc-gold hover:border-transparent rounded">DOWNLOAD ' . $a['title'] . ' </a>
         <object class="w-full" data="' . $a['link'] . '" width="816" height="1056">
             <p>It appears you don\'t have a PDF viewer for this browser.
             No biggie... you can <a href="' . $a['link'] . '">click here to download the PDF file.</a></p>
@@ -111,3 +111,10 @@ function wpdocs_codex_program_init()
 }
 
 add_action('init', 'wpdocs_codex_program_init');
+
+
+
+function msbsbc_pdf_rewrite() {
+    add_rewrite_rule( '^https:\/\/site.msbsbc.org\/wp-content\/uploads\/curricula\/([a-zA-Z-]{2,}).pdf$', 'downloads.php?q=$matches[1]', 'top' );
+ }
+ add_action( 'init', 'msbsbc_pdf_rewrite' );
