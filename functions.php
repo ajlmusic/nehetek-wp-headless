@@ -33,12 +33,13 @@ function msbsbc_pdf_link_att($atts)
 {
     $default = array(
         'link' => '#',
+        'title' => 'Download'
     );
     $a = shortcode_atts($default, $atts);
 
     return '
     <div class="flex flex-col align-center justify-center gap-3">
-        <a href="' . $a['link'] . '" class="bg-transparent hover:bg-msbsbc-gold text-msbsbc-gold font-semibold hover:text-white py-2 px-4 border border-msbsbc-gold hover:border-transparent rounded">Download file.</a>
+        <a href="' . $a['link'] . '" class=" text-center bg-transparent hover:bg-msbsbc-gold text-msbsbc-gold font-semibold hover:text-white py-2 px-4 border border-msbsbc-gold hover:border-transparent rounded">Download file</a>
         <object class="w-full" data="' . $a['link'] . '" width="816" height="1056">
             <p>It appears you don\'t have a PDF viewer for this browser.
             No biggie... you can <a href="' . $a['link'] . '">click here to download the PDF file.</a></p>
