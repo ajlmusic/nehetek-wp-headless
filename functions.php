@@ -39,7 +39,7 @@ function msbsbc_pdf_link_att($atts)
     return '<object class="w-full" data="' . $a['link'] . '" width="800" height="500">
             <p>It appears you don\'t have a PDF viewer for this browser.
             No biggie... you can <a href="' . $a['link'] . '">click here to download the PDF file.</a></p>
-         </object>';
+            </object>';
 }
 add_shortcode('msbsbcpdf', 'msbsbc_pdf_link_att');
 
