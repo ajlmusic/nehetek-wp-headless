@@ -1,0 +1,554 @@
+/* CSS HEX */
+/* root {
+  --black: #000000ff;
+  --chamoisee: #a8814bff;
+  --bone: #e4dbccff;
+  --alabaster: #eee8deff;
+  --dun: #d3c1a8ff;
+  --red: #ff0000ff;
+  --dun-2: #dcceb9ff;
+  --isabelline: #f6f2ecff;
+} */
+
+
+@import url("https://fonts.googleapis.com/css?family=Cabin&display=swap");
+
+:root {
+  --primary-bg-color: rgba(220, 147, 23, 1);
+  --secondary-bg-color: rgba(169, 51, 51, 1);
+  --showcase-bg-color: rgba(150, 170, 230, 1);
+  --overlay-color: rgba(14, 20, 0, 0.85);
+  --menu-speed: 0.75s;
+  --bg-info: rgba(52, 52, 52, 1);
+  --bg-info2: rgb(167, 167, 167);
+  --page-bg: rgb(39, 46, 75);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bio {
+  margin-top: 1em;
+}
+
+.bio p {
+  color: white;
+  font-family: arial;
+  text-align: left;
+  font-size: 1.25em;
+}
+
+html {
+  background: black;
+}
+
+body {
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    var(--secondary-bg-color) 0%,
+    var(--primary-bg-color) 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, var(--secondary-bg-color)),
+    color-stop(100%, var(--primary-bg-color))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    var(--secondary-bg-color) 0%,
+    var(--primary-bg-color) 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    var(--secondary-bg-color) 0%,
+    var(--primary-bg-color) 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    var(--secondary-bg-color) 0%,
+    var(--primary-bg-color) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    var(--secondary-bg-color) 0%,
+    var(--primary-bg-color) 100%
+  );
+  min-height: 100%;
+  font-family: "Cabin", sans-serif;
+}
+
+.logo {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 60px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+}
+
+.content-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+}
+
+.content-primary h1,
+p {
+  padding-right: 2em;
+  font-size: 3.3em;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: left;
+}
+
+.content-primary h2 {
+  padding-right: 2em;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: left;
+}
+
+.content-primary p {
+  font-size: 2.3rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.showcase h1,
+p {
+  font-size: 3.3em;
+  text-shadow: 2px 2px 4px #000000;
+  /* text-align: center; */
+}
+
+.showcase p {
+  font-size: 2.3rem;
+}
+
+.primary {
+  background-image: url("https://www.magmedfound.org/wp-content/uploads/2020/09/cdc-aeh1dbI_a7I-unsplash-scaled.jpg");
+}
+
+.secondary {
+  background-image: url("https://www.magmedfound.org/wp-content/uploads/2018/01/Teen-Summit-Natchez-4-17-5.png");
+}
+
+.about {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+  color: white;
+  padding: 5rem;
+  background: rgb(195, 182, 161);
+}
+
+.about h1 {
+  font-size: 3.3em;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: left;
+}
+
+.about p {
+  font-size: 1.3rem;
+}
+.about-img {
+  margin: 0.5em;
+  border-radius: 50%;
+}
+
+.directions {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  /* max-height: 800px; */
+  background-image: url("https://www.magmedfound.org/wp-content/uploads/2020/09/cropped-magnoliamedicalfoundationlogo.jpeg");
+  background-repeat: repeat;
+  background-color: white;
+  overflow: scroll;
+}
+
+.additional-content {
+  padding: 2em;
+  background-color: antiquewhite;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.additional-content > div {
+  margin: 0 3em;
+}
+
+.additional-content h1 {
+  padding: 0.25em;
+  margin-bottom: 0.5em;
+  background: var(--bg-info);
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+  min-width: 350px;
+}
+
+.quick-links-container {
+  padding: 2em;
+  width: 350px;
+  height: 350px;
+}
+
+.quick-links {
+  box-sizing: border-box;
+}
+
+.quick-links li {
+  background-color: white;
+  list-style: none;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+.quick-links a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+}
+
+footer {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  color: white;
+}
+
+footer > div {
+  margin: 1em;
+}
+
+/* Main Container */
+.container {
+  margin: auto;
+  overflow: auto;
+  padding: 0;
+}
+
+.container > div {
+  margin: auto;
+}
+
+.showcase {
+  /* background: var(--showcase-bg-color); */
+  color: white;
+  min-height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase h1 {
+  font-size: 2.3em;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.5;
+  color: black;
+}
+
+.social-container {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+}
+
+.social {
+  margin: 0.125em;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.social a,
+a:visited {
+  color: white;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.twitter {
+  background: #1da1f2;
+}
+
+.youtube {
+  background: #dd4b39;
+}
+
+.linkedin {
+  background: #0077b5;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+/* Calendar Styles */
+
+iframe #title-date-span-head {
+  font-size: 1em;
+  background-color: #999999;
+  /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+  font-weight: bold;
+  color: black;
+  padding: 2px;
+  margin-bottom: 6px;
+}
+
+iframe a {
+  text-decoration: none;
+}
+
+iframe a:hover {
+  text-decoration: underline;
+}
+
+iframe .date-td {
+  padding: 7px 5px 4px 5px;
+  background-color: #999999;
+  font-size: 11px;
+  /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+  color: black;
+}
+
+iframe .event-td {
+  padding: 5px;
+}
+
+iframe .time-td {
+  padding: 5px;
+}
+
+iframe .event-tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+iframe .event-tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+iframe .bold-td {
+  font-weight: bold;
+}
+
+iframe .strikethrough-td {
+  text-decoration: line-through;
+}
+
+iframe .italic-td {
+  font-style: italic;
+}
+
+iframe .underline-td {
+  text-decoration: underline;
+}
+
+.calendar {
+  font-size: 4rem;
+}
+
+.button-container {
+  /* padding: 1rem; */
+  /*   border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* gap: 1em; */
+  flex-direction: row;
+  flex-wrap: calc(200px);
+}
+
+.showcase-button {
+  width: 100%;
+  height: 80px;
+  color: black;
+  font-size: 1.25em;
+  background-color: #d3d2d8;
+  border: 0;
+  /* border-radius: 5px; */
+  padding: 1rem;
+}
+
+.showcase-button-primary {
+  background-color: #d3b76b;
+}
+
+.showcase-button-secondary {
+  background-color: #dc9317;
+}
+
+.showcase-button :hover {
+  background-color: #25d366;
+}
+
+.footer-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #333;
+  color: white;
+}
+
+.footer-wrapper div {
+  padding: 2em;
+  min-height: 100px;
+
+  /* background-color: #999999; */
+}
+
+.footer-wrapper h3 {
+  margin-bottom: 0.5em;
+}
+
+.footer-wrapper p {
+  font-size: 1em;
+}
+
+/* Inner Showcase */
+
+.showcase-inner {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: #333; */
+  color: white;
+}
+
+.showcase-inner div {
+  padding: 1em;
+  min-height: 100px;
+
+  /* background-color: #999999; */
+}
+
+.showcase-inner h3 {
+  margin-bottom: 0.5em;
+}
+
+.showcase-inner p {
+  font-size: 1em;
+}
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
