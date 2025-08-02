@@ -1,7 +1,8 @@
-# MSBSBC Wordpress Theme
+# NEHETEK Wordpress Theme
 
 ## Shortcodes
 
 for pdfs:
-
-[msbsbcpdf link=""]# msbsbc-wp-theme
+```
+[nts link=""]# nehetek-wp-headless
+```
